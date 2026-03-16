@@ -1,0 +1,28 @@
+.homepage-wrapper {
+  /* This creates the space between Navbar and Hero */
+  padding-top: 100px; 
+  display: flex;
+  flex-direction: column;
+  
+  // Internal spacing between Hero, Courses, and Testimonials
+  gap: 60px; 
+  background-color: #0f172a;
+}
+
+#home, #courses, #testimonials {
+  /* Ensure each section has its own "breathing room" */
+  padding: 40px 0;
+  scroll-margin-top: 100px; // Important for smooth scroll to land correctly
+}
+
+/* Optional: Ease-in animation for sections as they appear */
+.section-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+  
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

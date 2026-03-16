@@ -1,0 +1,130 @@
+.overview-container {
+  background-color: #111827; // Matches gray-900
+  padding: 80px 15px;
+  display: flex;
+  justify-content: center;
+
+  .overview-wrapper {
+    max-width: 1024px;
+    width: 100%;
+  }
+}
+
+.overview-heading {
+  font-size: 2.25rem;
+  font-weight: 800;
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+
+  span {
+    color: #a855f7; // purple-400
+  }
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.overview-card {
+  background-color: #1f2937; // gray-800
+  padding: 20px;
+  border-radius: 16px;
+  border-top: 4px solid rgba(168, 85, 247, 0.7);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+    border-top-color: #a855f7;
+    box-shadow: 0 20px 30px -10px rgba(168, 85, 247, 0.2);
+  }
+
+  .card-top {
+    margin-bottom: 15px;
+
+    .overview-icon {
+      height: 32px;
+      width: 32px;
+      color: #a855f7;
+      margin-bottom: 15px;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 2px;
+    }
+
+    .card-duration {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #d8b4fe; // purple-300
+    }
+  }
+
+  .card-features {
+    list-style: disc;
+    list-style-position: inside;
+    color: #d1d5db; // gray-300
+    font-size: 0.875rem;
+    margin-bottom: 15px;
+    flex-grow: 1;
+
+    li {
+      margin-bottom: 8px;
+    }
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid #374151; // gray-700
+
+    .card-price {
+      font-size: 1.125rem;
+      font-weight: 800;
+      color: #60a5fa; // blue-400
+    }
+
+    .book-btn {
+      padding: 6px 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      background-color: #9333ea; // purple-600
+      color: white;
+      border-radius: 9999px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+
+      &:hover {
+        background-color: #7e22ce;
+      }
+    }
+  }
+}
+
+.overview-footer-note {
+  text-align: center;
+  color: #9ca3af;
+  margin-top: 20px;
+  font-size: 0.875rem;
+
+  a {
+    color: #a855f7;
+    text-decoration: none;
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

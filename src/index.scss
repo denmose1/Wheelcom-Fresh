@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #0f172a; // Match your dark theme
+  scroll-behavior: smooth; 
+  overflow-x: hidden;
+}
+
+.snap-container {
+  width: 100%;
+  display: block; 
+  
+  /* Modern Scrollbar */
+  &::-webkit-scrollbar { width: 8px; }
+  &::-webkit-scrollbar-track { background: #0f172a; }
+  &::-webkit-scrollbar-thumb { 
+    background: #374151; 
+    border-radius: 10px;
+    &:hover { background: #4b5563; }
+  }
+}
+
+.snap-section, .snap-section-long {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  
+  /* FIX: Reset min-height to ensure sections only take as much space as they need */
+  min-height: auto; 
+  
+  /* FIX: Tighten vertical spacing between the merged components */
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 40px;   // Small gap for breathing room
+  padding-bottom: 40px; 
+}
+h1 {
+  /* MDN recommended fix for nested h1 elements */
+  font-size: clamp(2.5rem, 6vw, 4rem); 
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  font-weight: 800;
+  color: #ffffff;
+}
